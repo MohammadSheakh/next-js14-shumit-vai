@@ -1,3 +1,4 @@
 npx create-next-app@latest 
 
 pore dot dite hobe .. project name er jaygay .. 
+

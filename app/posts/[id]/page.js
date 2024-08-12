@@ -3,6 +3,7 @@ import getAllPost from "@/lib/getAllPosts";
 import getAPost from "@/lib/getAPost";
 import getPostComments from "@/lib/getPostComments";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import React, { Suspense } from "react";
 
 // function er nam eitai rakhte hobe ...
@@ -31,6 +32,11 @@ async function PostPage({ params }) {
   // const [post, comments] = await Promise.all([postPromise, commentsPromise]);
 
   const post = await postPromise;
+
+  // if (!post.title) {
+  //   return notFound();
+  // }
+
   return (
     <>
       <div>page details of {id}</div>
